@@ -1,0 +1,146 @@
+<!doctype html>  
+<html>  
+  <head>
+    <meta charset="utf-8">
+    <title>JD PRODUCTION</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+
+<div class="page-header ">
+	<div class="row">
+		<div class="col-xs-1">
+			<!--<img src="logo.png" alt="logo.png" class="img-rounded">	-->	
+		</div>	
+		<div class="col-xs-10 text-center">
+			  <h1>LABORATORIO<small> ESPIGA DE ORO C.A. </small></h1>			  
+		</div> 
+
+	</div>   
+</div>
+
+
+<ul class="nav nav-tabs ">
+  <li role="presentation"><a href="index.html">Crear Resultados</a></li>
+  <li role="presentation" class="active"><a href="agregarPaciente.html">Agregar Paciente</a></li>
+  <li role="presentation"><a href="actividades.html">Actividades</a></li>
+</ul>
+
+
+
+<div class="row" >
+ 		<div class="col-md-6">
+		 	<div class="row">
+			 	<div class="col-xs-6">
+				  		<div class="form-group">
+						    <label for="exampleInputName2">Nombre y Apellido (*)</label>
+						    <input type="text" class="form-control" id="nombrePaciente" placeholder="Pedro Perez">
+						 </div> 
+				</div>
+
+		  		<div class="col-xs-6">
+			  		<div class="form-group">
+					    <label for="exampleInputName2">Edad (*)</label>
+					    <input type="text" class="form-control" id="edad" placeholder="24">
+					 </div> 
+				</div>		  		
+		  	</div>
+
+		</div> 
+
+		<div class="col-md-6">
+			
+			<div class="row">
+				<div class="col-xs-6 ">
+			  		<div class="form-group">
+					    <label for="exampleInputName2">Fecha Nacimiento (*)</label>
+					    <input type="date" class="form-control" id="fnacimiento" placeholder="24/07/2017">
+					 </div> 
+				</div>
+
+				<div class="col-xs-6 ">
+			  		<div class="form-group">
+					    <label for="exampleInputName2">Fecha Prueba (*)</label>
+					    <input type="date" class="form-control" id="fprueba" placeholder="24/07/2017">
+					 </div> 
+				</div>
+		  	</div>
+
+		 </div> 
+
+
+		 <div class="col-xs-6">
+		 	<div class="form-group">
+			 	<label for="email">Email address:</label>
+	    		<input type="email" class="form-control" id="email">
+	    	</div>
+		 </div>
+
+		 <div class="col-xs-6">
+		 	<p class="bg-success text-center"><strong>Examenes a realizar (*)</strong></p>
+
+		 	<div class="row">
+		 		<div class="col-xs-6">
+				 	<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value= "Ninguno">Ninguno</label>
+					</div>
+				 	<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="Hematologia">Hematologia</label>
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="VRML" >VRML</label>
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="Mercurio" >Mercurio</label>
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="Especiales" >Especiales</label>
+					</div>
+				</div>
+
+				<div class="col-xs-6">
+					<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="Hematologia">Hematologia</label>
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="VRML" >VRML</label>
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="Mercurio" >Mercurio</label>
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" name="prueba" id="chestudio" value="Especiales" >Especiales</label>
+				</div>
+			</div>
+		 </div>
+
+		 <div class="col-xs-12">
+		 	<div class="text-center">
+		 		<button type="button-info" class="btn btn-primary btn-lg" id="AgregarUs">Agregar</button>
+		 		<button type="button-info" class="btn btn-primary btn-lg" id="Mostrar">mostrar</button>
+		 	</div>
+		 </div>
+</div>   
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="eventos.js"></script>
+
+<script src='node_modules/sql.js/js/sql.js'></script>
+  </body>
+</html> 

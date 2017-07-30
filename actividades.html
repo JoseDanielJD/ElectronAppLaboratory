@@ -1,0 +1,74 @@
+<!doctype html>  
+<html>  
+  <head>
+    <meta charset="utf-8">
+    <title>JD PRODUCTION</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+
+<div class="page-header ">
+	<div class="row">
+		<div class="col-xs-1">
+			<!--<img src="logo.png" alt="logo.png" class="img-rounded">	-->	
+		</div>	
+		<div class="col-xs-10 text-center">
+			  <h1>LABORATORIO<small> ESPIGA DE ORO C.A. </small></h1>			  
+		</div> 
+
+	</div>   
+</div>
+
+
+<ul class="nav nav-tabs ">
+  <li role="presentation"><a href="index.html">Crear Resultados</a></li>
+  <li role="presentation"><a href="agregarPaciente.html">Agregar Paciente</a></li>
+  <li role="presentation" class="active"><a href="actividades.html">Actividades</a></li>
+</ul>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script src="eventos.js"></script>
+
+<script src='node_modules/sql.js/js/sql.js'></script>
+
+<script type="text/javascript" src="sqlite/ExercisePage3JS.js"> </script>
+
+  </body>
+
+  <script type="text/javascript">
+    var db = openDatabase("AddressBook", "1.0", "Address Book", 200000);  // Open SQLite Database
+
+    db.transaction(function (tx) {
+ 
+        tx.executeSql(selectAllStatement, [], function (tx, result) {
+ 
+            dataset = result.rows;
+ 
+            for (var i = 0, item = null; i < dataset.length; i++) {
+ 
+                item = dataset.item(i);
+
+                console.log("item("+i+"): ",item);
+              }
+        });
+      });
+
+
+  </script>
+
+</html> 
